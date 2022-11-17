@@ -1,0 +1,14 @@
+#projects-section {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  position: relative;
+  background-color: red;
+
+  transition: 500ms;
+  z-index: 0;
+}
+
+#projects-section.current {
+  transform: translateX(-100%);
+  z-index: 2;
+}

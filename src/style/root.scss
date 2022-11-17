@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#page-grid {
+  display: grid;
+  grid: repeat(2, 100vh) / repeat(3, 100vw);
+  transform: translateX(-100%);
+}
