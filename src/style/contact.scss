@@ -2,12 +2,8 @@
   grid-row: 2/3;
   grid-column: 2/3;
   position: relative;
-  background-color: purple;
-  transition: 500ms;
-  z-index: 0;
+  background-color: #800080;
 }
 
-#contact-section.current {
-  transform: translateY(-100%);
-  z-index: 2;
-}
+// #contact-section.current {
+// }

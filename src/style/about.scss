@@ -3,13 +3,7 @@
   grid-column: 1/2;
   position: relative;
   background-color: yellow;
-
-  transition: 500ms;
-  transform: translateX(0);
-  z-index: 0;
 }
 
-#about-section.current {
-  transform: translateX(100%);
-  z-index: 1;
-}
+// #about-section.current {
+// }

@@ -1,12 +1,22 @@
 import "../style/contact.scss";
 
-const Contact = ({ view, toMain }) => {
+const Contact = ({ view, toMain, resetPrev }) => {
+  const getTabIndex = () => (view === "contact" ? "0" : "-1");
+
   return (
     <section
       id="contact-section"
       className={view === "contact" ? "current" : undefined}
     >
-      <button onClick={toMain}>go back</button>
+      <button
+        tabIndex={getTabIndex()}
+        onClick={() => {
+          toMain();
+          resetPrev();
+        }}
+      >
+        go back
+      </button>
     </section>
   );
 };
