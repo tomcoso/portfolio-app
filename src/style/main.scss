@@ -1,49 +1,92 @@
 // MASSIVE SCREENS
 @media (min-width: 1450px) {
   :root {
-    --main-padding: 15vh 20vw;
-    --nav-padding-top: 3rem;
+    --main-grid: min-content 1fr / 1fr min-content;
+    --nav-row: 1/3;
+    --nav-col: 2/3;
+    --nav-top: 0;
+    --nav-grid: repeat(4, min-content) / 1fr;
+    --nav-line-row: 1/2;
+    --nav-line-margin: 4vmax 1vmax;
+    --nav-grid-place: center;
+
+    --info-margin: 0 10vmax 10vmax 0;
+
+    --title-width: min-content;
+    --title-padding: 2vmax 4vmax;
   }
 }
 // TABLET & DESKTOP
 @media (min-width: 600px) and (max-width: 1450px) {
   :root {
-    --main-padding: 10vh 12vw;
-    --nav-padding-top: 1rem;
+    --main-grid: min-content 1fr / 3fr 1fr;
+    --nav-row: 1/3;
+    --nav-col: 2/3;
+    --nav-top: 0;
+    --nav-grid: repeat(4, min-content) / 1fr;
+    --nav-line-row: 1/2;
+    --nav-line-margin: 4vmax 1vmax;
+    --nav-grid-place: center;
+
+    --info-margin: 0 0 10vmax 0;
+
+    --title-width: min-content;
+    --title-padding: 2vmax 4vmax;
   }
 }
 // MOBILE
 @media (max-width: 600px) {
   :root {
-    --main-padding: 10vh 1rem;
-    --nav-padding-top: 3rem;
+    --main-grid: repeat(3, min-content) / 1fr;
+    --nav-row: 3/4;
+    --nav-col: 1/2;
+    --nav-top: -15vh;
+    --nav-grid: 1fr repeat(3, min-content) / repeat(2, min-content);
+    --nav-line-row: 1/5;
+    --nav-line-margin: 4vmax 4vmax 1vmax 1vmax;
+    --nav-grid-place: start;
+
+    --info-margin: 0;
+
+    --title-width: 100%;
+    --title-padding: 2vmax 0;
   }
 }
 
 #main-section {
   grid-row: 1/2;
   grid-column: 2/3;
-  padding: var(--main-padding);
+  padding: 2rem;
   background-color: var(--bg-color);
 
   position: relative;
   overflow: hidden;
-  display: grid;
-  grid: min-content 1fr / repeat(2, 1fr);
 
-  > div {
+  #main-content-wrap {
+    display: grid;
+    grid: var(--main-grid);
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .main-title {
     grid-row: 1/2;
-    grid-column: 1/3;
-    padding: 2vw 1rem 1rem 2vw;
-    width: min-content;
+    grid-column: 1/2;
+    padding: var(--title-padding);
+    width: var(--title-width);
+    text-align: center;
     white-space: nowrap;
+    z-index: 1;
 
     > h1 {
-      font-size: clamp(3.2rem, 9vw, 6rem);
-      font-family: "Lora", serif;
+      font-size: clamp(3rem, 9vw, 5rem);
+      font-family: "Exo", sans-serif;
       font-weight: 500;
 
       color: transparent;
+      animation: var(--bg-animation);
       background-image: var(--bg-gradient);
       background-clip: text;
       background-size: 3000px;
@@ -51,35 +94,59 @@
 
     > p {
       text-align: right;
-      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
       font-weight: 400;
       padding-right: clamp(2rem, 5vw, 4rem);
 
       color: transparent;
+      animation: var(--bg-animation);
       background-image: var(--bg-gradient);
       background-clip: text;
       background-size: 3000px;
     }
   }
+  .style-line {
+    background-image: var(--bg-gradient);
+    background-size: 3000px;
+    animation: var(--bg-animation);
+    width: 2px;
+  }
 
-  > nav {
-    grid-row: 2/3;
-    grid-column: 2/3;
-    padding: 1rem;
-    padding-right: 5vw;
+  nav {
+    grid-row: var(--nav-row);
+    grid-column: var(--nav-col);
+    padding: 1rem 4vmax;
+    margin-top: var(--nav-top);
     width: min-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    place-self: start end;
-    width: clamp(10rem, 25vw, 16rem);
+    display: grid;
+    grid: var(--nav-grid);
+    place-content: center;
+    place-items: var(--nav-grid-place);
+    place-self: start;
     overflow: visible;
+    position: relative;
+    z-index: 1;
+
+    .nav.style-line {
+      height: 30vh;
+      margin: var(--nav-line-margin);
+      grid-row: var(--nav-line-row);
+    }
+
+    > button:first-of-type {
+      grid-row: 2/3;
+    }
+    > button:nth-of-type(2) {
+      grid-row: 3/4;
+    }
+    > button:nth-of-type(3) {
+      grid-row: 4/5;
+    }
 
     > button {
       border: none;
       padding: 0.5rem;
-      padding-top: var(--nav-padding-top);
-      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-size: 1.2rem;
       font-weight: 400;
       font-family: inherit;
       text-align: left;
@@ -102,183 +169,136 @@
       &:is(:hover, :focus) {
         border: none;
         outline: none;
+        filter: blur(1px);
       }
     }
   }
-}
 
-// START ANIMATIONS
-@keyframes slide-in-left {
-  0% {
-    filter: blur(5px) brightness(250%);
-    transform: translateX(-100vw);
-  }
-  100% {
-    filter: blur(0px);
-    transform: translateX(0);
-  }
-}
-@keyframes slide-in-right {
-  0% {
-    filter: blur(10px) brightness(250%);
-    transform: translateX(50vw);
-  }
-  100% {
-    filter: blur(0);
-    transform: translateX(0);
-  }
-}
-@keyframes solidify {
-  0% {
-    filter: opacity(0) blur(10px) brightness(250%);
-  }
-  100% {
-    filter: opacity(1) blur(0px);
-  }
-}
-@keyframes text-shadow-appear {
-  0% {
-    text-shadow: 0px 0px 15px white;
-  }
-  30% {
-    text-shadow: 0px 0px 15px white;
-  }
-  100% {
-    text-shadow: 0px 0px 0px white;
-  }
-}
-@keyframes skew-init {
-  0% {
-    transform: skew(60deg);
-  }
-  100% {
-    transform: skew(5deg, -2deg);
-  }
-}
-@keyframes skew-flicker {
-  0% {
-    transform: skew(5deg, -2deg);
-  }
-  100% {
-    transform: skew(3deg, -2deg);
-  }
-}
+  .main-info {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: grid;
+    grid: 1fr / repeat(2, min-content);
+    gap: 1.5rem;
+    place-self: center start;
+    position: relative;
+    z-index: 1;
 
-// ANIMATIONS
+    padding: 4vmax;
+    margin: var(--info-margin);
 
-#main-section.from-main {
-  h1 {
-    animation: var(--bg-animation),
-      slide-in-left 800ms cubic-bezier(0, 0.6, 0, 0.96);
-  }
-  p {
-    animation: var(--bg-animation),
-      slide-in-left 800ms cubic-bezier(0, 0.6, 0, 0.96);
-  }
-  button:is(:hover, :focus) {
-    > span {
-      filter: hue-rotate(100deg) saturate(200%);
+    color: transparent;
+    background-image: var(--bg-gradient);
+    background-size: 3000px;
+    background-clip: text;
+    animation: var(--bg-animation);
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+
+      > .style-line {
+        height: 10vh;
+        margin: 1rem 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: transparent;
+        cursor: pointer;
+        writing-mode: vertical-lr;
+
+        &:hover,
+        &:focus {
+          outline: none;
+          border: none;
+          background-image: var(--bg-gradient);
+          background-clip: text;
+          filter: blur(1px);
+        }
+      }
     }
-  }
-  button:active {
-    > span {
-      filter: hue-rotate(100deg) saturate(200%) brightness(150%);
+
+    p {
+      font-size: 1.2rem;
+      white-space: normal;
+      width: 17ch;
+      font-family: inherit;
     }
-  }
-  button:first-child {
-    animation: slide-in-right 500ms forwards
-      cubic-bezier(0.51, 1.12, 0.82, 0.79);
-  }
-  button:nth-child(2) {
-    animation: slide-in-right 700ms forwards
-      cubic-bezier(0.51, 1.12, 0.82, 0.79);
-  }
-  button:nth-child(3) {
-    animation: slide-in-right 900ms forwards
-      cubic-bezier(0.51, 1.12, 0.82, 0.79);
   }
 }
 
-#main-section.from-projects {
-  h1 {
-    animation: var(--bg-animation),
-      solidify 1500ms cubic-bezier(0.67, -0.04, 0.79, 0.33);
-  }
-  p {
-    animation: var(--bg-animation),
-      solidify 1300ms cubic-bezier(0.67, -0.04, 0.79, 0.33);
-  }
-  button:is(:hover, :focus) {
-    > span {
-      filter: blur(1px);
-    }
-  }
-  button:first-child {
-    animation: solidify 1100ms cubic-bezier(0.67, -0.04, 0.79, 0.33);
-  }
-  button:nth-child(2) {
-    animation: solidify 900ms cubic-bezier(0.67, -0.04, 0.79, 0.33);
-  }
-  button:nth-child(3) {
-    animation: solidify 700ms cubic-bezier(0.67, -0.04, 0.79, 0.33);
-  }
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 0;
 }
 
-#main-section.from-about {
-  h1 {
-    animation: var(--bg-animation), text-shadow-appear 1300ms linear;
-  }
-  p {
-    animation: var(--bg-animation), text-shadow-appear 1300ms linear;
-  }
-  button:is(:hover, :focus) {
-    span {
-      text-shadow: 0px 0px 5px white;
-    }
-  }
-  button:active {
-    span {
-      text-shadow: 0px 0px 10px white;
-    }
-  }
-  button {
-    animation: text-shadow-appear 1300ms linear;
-  }
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  filter: opacity(0.4);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line:nth-child(1) {
+  margin-left: -20vmax;
+}
+.line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+.line:nth-child(3) {
+  margin-left: 20vmax;
+}
+.line:nth-child(3)::after {
+  animation-delay: 5.5s;
+}
+.line:nth-child(4) {
+  margin-left: -40vmax;
+}
+.line:nth-child(4)::after {
+  animation-delay: 4s;
+}
+.line:nth-child(5) {
+  margin-left: 40vmax;
+}
+.line:nth-child(5)::after {
+  animation-delay: 0.9s;
 }
 
-#main-section.from-contact {
-  h1 {
-    animation: var(--bg-animation), skew-init 1.5s,
-      skew-flicker 3s 1.5s infinite alternate;
+@keyframes drop {
+  0% {
+    top: -50%;
   }
-  p {
-    animation: var(--bg-animation), skew-init 1.5s,
-      skew-flicker 3s 1.5s infinite alternate;
-  }
-  button:is(:hover, :focus) {
-    &:first-child {
-      transform: skew(-15deg, 6deg) !important;
-    }
-    &:nth-child(2) {
-      transform: skew(-15deg, -3deg) !important;
-    }
-    &:nth-child(3) {
-      transform: skew(-15deg, 2deg) !important;
-    }
-  }
-  button:active {
-    span {
-      transform: skew(-20deg);
-    }
-  }
-  button {
-    transition: 300ms;
-    transform: skewY(6deg);
-  }
-  button:nth-child(2) {
-    transform: skewY(-3deg);
-  }
-  button:nth-child(3) {
-    transform: skewY(2deg);
+  100% {
+    top: 110%;
   }
 }
