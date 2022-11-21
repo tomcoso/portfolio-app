@@ -5,15 +5,7 @@
 }
 
 :root {
-  --bg-color: #222222;
-  // --bg-gradient: linear-gradient(
-  //   60deg,
-  //   #f7b263,
-  //   #fcc75d,
-  //   #fcdd82,
-  //   #f9fdb3,
-  //   #faff9a
-  // );
+  --bg-color: #161616;
   --bg-gradient: linear-gradient(
     60deg,
     #90f1ef,
@@ -22,19 +14,10 @@
     #ffef9f,
     #c1fba4
   );
-  --bg-animation: gradient-move 15s infinite alternate linear;
+  --bg-animation: gradient-move 25s infinite alternate linear;
 
   font-family: "Abel", sans-serif;
   font-size: 16px;
-}
-
-@keyframes gradient-move {
-  0% {
-    background-position: left;
-  }
-  100% {
-    background-position: right;
-  }
 }
 
 #root {
@@ -49,22 +32,97 @@
 #page-grid {
   display: grid;
   grid: repeat(2, 100vh) / repeat(3, 100vw);
-  gap: 5%;
   transition: transform 500ms;
-}
-
-#page-grid.main {
-  transform: translateX(-105%);
+  transform: translateX(-100%);
 }
 
 #page-grid.projects {
-  transform: translateX(-210%);
+  #projects-section {
+    transform: translateX(-100%);
+    padding: 2rem;
+    #projects-content-wrap {
+      border: 1px solid rgba($color: white, $alpha: 0.25);
+    }
+  }
 }
 
 #page-grid.about {
-  transform: translateX(0%);
+  #about-section {
+    transform: translateX(100%);
+    padding: 2rem;
+    #about-content-wrap {
+      border: 1px solid rgba($color: white, $alpha: 0.25);
+    }
+  }
 }
 
 #page-grid.contact {
-  transform: translateX(-105%) translateY(-55%);
+  #contact-section {
+    transform: translateY(-100%);
+    padding: 2rem;
+    #contact-content-wrap {
+      border: 1px solid rgba($color: white, $alpha: 0.25);
+    }
+  }
+}
+
+.style-line {
+  background-image: var(--bg-gradient);
+  background-size: 3000px;
+  animation: var(--bg-animation);
+  width: 2px;
+}
+
+button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: inherit;
+  text-align: left;
+  background-color: transparent;
+  white-space: nowrap;
+
+  position: relative;
+
+  cursor: pointer;
+  user-select: none;
+
+  > span {
+    letter-spacing: 5px;
+    display: block;
+    transition: 200ms;
+    background-image: var(--bg-gradient);
+    background-size: 3000px;
+    background-clip: text;
+    color: transparent;
+    animation: var(--bg-animation);
+  }
+  &:is(:hover, :focus) {
+    border: none;
+    outline: none;
+    filter: blur(1px);
+  }
+}
+
+.vertical {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+@keyframes appear {
+  0% {
+    filter: opacity(0) blur(20px);
+  }
+  100% {
+    filter: opacity(1) blur(0px);
+  }
+}
+@keyframes gradient-move {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }

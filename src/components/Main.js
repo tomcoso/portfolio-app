@@ -1,12 +1,12 @@
 import "../style/main.scss";
 
-const Main = ({ view, toView, prev, resetPrev }) => {
+const Main = ({ view, toView }) => {
   const getTabIndex = () => (view === "main" ? "0" : "-1");
 
   return (
     <section
       id="main-section"
-      className={view === "main" ? "current from-" + prev : "from-" + prev}
+      className={view === "main" ? "current" : undefined}
     >
       <div id="main-content-wrap">
         <div className="main-title">
@@ -21,6 +21,8 @@ const Main = ({ view, toView, prev, resetPrev }) => {
               href="https://github.com/tomcoso"
               target="_blank"
               rel="noreferrer"
+              className="vertical"
+              tabIndex={getTabIndex()}
             >
               gh
             </a>
@@ -28,6 +30,8 @@ const Main = ({ view, toView, prev, resetPrev }) => {
               href="https://www.linkedin.com/in/tom%C3%A1s-dessy-24a0a223a/"
               target="_blank"
               rel="noreferrer"
+              className="vertical"
+              tabIndex={getTabIndex()}
             >
               li
             </a>
@@ -45,30 +49,21 @@ const Main = ({ view, toView, prev, resetPrev }) => {
           <button
             tabIndex={getTabIndex()}
             id="to-projects"
-            onClick={() => {
-              toView("projects");
-              resetPrev();
-            }}
+            onClick={() => toView("projects")}
           >
             <span>Projects</span>
           </button>
           <button
             tabIndex={getTabIndex()}
             id="to-about"
-            onClick={() => {
-              toView("about");
-              resetPrev();
-            }}
+            onClick={() => toView("about")}
           >
-            <span>About</span>
+            <span>About me</span>
           </button>
           <button
             tabIndex={getTabIndex()}
             id="to-contact"
-            onClick={() => {
-              toView("contact");
-              resetPrev();
-            }}
+            onClick={() => toView("contact")}
           >
             <span>Contact</span>
           </button>

@@ -2,7 +2,10 @@
   grid-row: 1/2;
   grid-column: 3/4;
   position: relative;
-  background-color: red;
+  z-index: 2;
+
+  background-color: var(--bg-color);
+  transition: transform 500ms ease;
 }
 
 // #projects-section.current {

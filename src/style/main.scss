@@ -68,7 +68,8 @@
     width: 100%;
     height: 100%;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    animation: appear 2000ms ease;
   }
 
   .main-title {
@@ -105,17 +106,11 @@
       background-size: 3000px;
     }
   }
-  .style-line {
-    background-image: var(--bg-gradient);
-    background-size: 3000px;
-    animation: var(--bg-animation);
-    width: 2px;
-  }
 
   nav {
     grid-row: var(--nav-row);
     grid-column: var(--nav-col);
-    padding: 1rem 4vmax;
+    padding: 1rem 4.5vmax;
     margin-top: var(--nav-top);
     width: min-content;
     display: grid;
@@ -141,37 +136,6 @@
     }
     > button:nth-of-type(3) {
       grid-row: 4/5;
-    }
-
-    > button {
-      border: none;
-      padding: 0.5rem;
-      font-size: 1.2rem;
-      font-weight: 400;
-      font-family: inherit;
-      text-align: left;
-      background-color: transparent;
-
-      position: relative;
-
-      cursor: pointer;
-      user-select: none;
-
-      > span {
-        letter-spacing: 5px;
-        display: block;
-        transition: 200ms;
-        background-image: var(--bg-gradient);
-        background-size: 3000px;
-        background-clip: text;
-        color: transparent;
-        animation: var(--bg-animation);
-      }
-      &:is(:hover, :focus) {
-        border: none;
-        outline: none;
-        filter: blur(1px);
-      }
     }
   }
 
@@ -210,9 +174,13 @@
         text-decoration: none;
         color: transparent;
         cursor: pointer;
-        writing-mode: vertical-lr;
         font-size: 1rem;
         letter-spacing: 2px;
+        background-image: var(--bg-gradient);
+        background-size: 3000px;
+        background-clip: text;
+        color: transparent;
+        animation: var(--bg-animation);
 
         &:hover,
         &:focus {
