@@ -8,13 +8,11 @@
   --bg-color: #161616;
   --bg-gradient: linear-gradient(
     60deg,
-    #90f1ef,
-    30%,
-    #ffd6e0,
-    #ffef9f,
-    #c1fba4
+    rgba(255, 252, 183, 1) 26%,
+    rgba(213, 240, 228, 1) 60%,
+    rgba(255, 204, 190, 1) 96%
   );
-  --bg-animation: gradient-move 25s infinite alternate linear;
+  --bg-animation: gradient-move 40s infinite alternate linear;
 
   font-family: "Abel", sans-serif;
   font-size: 16px;
