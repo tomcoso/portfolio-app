@@ -6,12 +6,7 @@
 
 :root {
   --bg-color: #161616;
-  --bg-gradient: linear-gradient(
-    60deg,
-    rgba(255, 252, 183, 1) 26%,
-    rgba(213, 240, 228, 1) 60%,
-    rgba(255, 204, 190, 1) 96%
-  );
+  --bg-gradient: linear-gradient(60deg, #fffcb7 26%, #d5f0e4 60%, #ffccbe 96%);
   --bg-animation: gradient-move 40s infinite alternate linear;
 
   font-family: "Abel", sans-serif;
