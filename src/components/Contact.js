@@ -61,6 +61,7 @@ const Contact = ({ view, toMain }) => {
           </a> */}
         </div>
       </div>
+      <div className="contact-bg"></div>
     </section>
   );
 };

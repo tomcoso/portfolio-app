@@ -30,6 +30,7 @@
   grid-column: 2/3;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 
   background-color: var(--bg-color);
   transition: transform 500ms ease, padding 500ms 400ms ease;
@@ -43,6 +44,8 @@
     transition: border 500ms 400ms ease;
     height: 100%;
     overflow: auto;
+    position: relative;
+    z-index: 2;
 
     display: grid;
     grid: var(--contact-grid);
@@ -211,5 +214,62 @@
   }
 }
 
-// #contact-section.current {
-// }
+@keyframes noise {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+.contact-bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  filter: opacity(0);
+  transition: opacity 500ms 500ms;
+  visibility: hidden;
+  z-index: 0;
+}
+#contact-section.current {
+  .contact-bg {
+    visibility: visible;
+    filter: opacity( 0.7);
+    animation: noise 400ms infinite;
+  }
+}
