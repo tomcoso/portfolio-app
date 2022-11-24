@@ -20,21 +20,21 @@ const About = ({ view, toMain }) => {
         <div id="about-info">
           <div>
             <p>
-              I am a self taugth front end developer, I enjoy building modern
-              websites and apps that are scalable and tidy, where pragmatism and
-              readability is a priority. I believe code can be an expression of
-              both simplicity and complexity.
+              I am a self-taugth front-end developer, that enjoys building
+              modern websites and apps that are scalable and tidy, where
+              pragmatism and readability is a priority. My belief is that code
+              can be an expression of both simplicity and complexity.
             </p>
             <p>
-              I love learning new concepts and technologies and exploring new
-              ideas. So I am always open to opportunities to continue developing
-              my skills and move forward in the industry.
+              Learning new concepts and technologies and exploring new ideas is
+              something I love. So I am always open to opportunities to continue
+              developing my skills and move forward in the industry.
             </p>
           </div>
           <p>
             Born in Argentina, Buenos Aires, 1998. I always have had too many
-            interests for my own good, until, by discovering programing, I found
-            a syncretism of art and pragmatism, expression and order.
+            interests for my own good, until, by discovering programing, found a
+            syncretism of art and pragmatism, expression and order.
           </p>
         </div>
         <div id="about-icons">

@@ -37,7 +37,7 @@ const Main = ({ view, toView }) => {
             </a>
           </div>
           <p>
-            I found programing on a rainy day in a foreign country, and since
+            Programing found me on a rainy day in a foreign country, and since
             then it has been my passion.
             <br />
             <br />I love ideas, communication, and moving forward.
