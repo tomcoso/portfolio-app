@@ -39,12 +39,12 @@ const About = ({ view, toMain }) => {
         </div>
         <div id="about-icons">
           <div className="style-line"></div>
-          <DiGit color="#ffccbe" size="min(5vmax, 2rem)" />
-          <DiJavascript1 color="#ffccbe" size="min(5vmax, 2rem)" />
-          <DiHtml5 color="#ffccbe" size="min(5vmax, 2rem)" />
-          <DiCss3 color="#ffccbe" size="min(5vmax, 2rem)" />
-          <DiReact color="#ffccbe" size="min(5vmax, 2rem)" />
-          <SiRedux color="#ffccbe" size="min(4.5vmax, 1.8rem)" />
+          <DiGit color="#fffcb7" size="min(5vmax, 2rem)" />
+          <DiJavascript1 color="#fffcb7" size="min(5vmax, 2rem)" />
+          <DiHtml5 color="#fffcb7" size="min(5vmax, 2rem)" />
+          <DiCss3 color="#fffcb7" size="min(5vmax, 2rem)" />
+          <DiReact color="#fffcb7" size="min(5vmax, 2rem)" />
+          <SiRedux color="#fffcb7" size="min(4.5vmax, 1.8rem)" />
         </div>
       </div>
       <div className="speckles">

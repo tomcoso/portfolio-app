@@ -5,8 +5,7 @@ import {
   SlArrowUp,
   SlArrowRight,
 } from "react-icons/sl";
-import { DiJavascript1, DiCss3, DiReact, DiHtml5 } from "react-icons/di";
-import { SiRedux, SiFirebase, SiJest } from "react-icons/si";
+import TechIcon from "./TechIcon";
 import { useEffect, useState } from "react";
 import { getProjects } from "../firebase-app";
 import uniqid from "uniqid";
@@ -40,27 +39,6 @@ const Projects = ({ view, toMain }) => {
       transform: `translateX(-${(selected + 1) * 200 - 20}px)`,
       width: (projects && projects.length + 2) * 200 + "px",
     },
-  };
-
-  const getTechIcons = (val) => {
-    switch (val) {
-      case "react":
-        return <DiReact color="#ffccbe" size="min(5vmax, 2rem)" />;
-      case "javascript":
-        return <DiJavascript1 color="#ffccbe" size="min(5vmax, 2rem)" />;
-      case "css":
-        return <DiCss3 color="#ffccbe" size="min(5vmax, 2rem)" />;
-      case "html":
-        return <DiHtml5 color="#ffccbe" size="min(5vmax, 2rem)" />;
-      case "redux":
-        return <SiRedux color="#ffccbe" size="min(4.3vmax, 1.6rem)" />;
-      case "firebase":
-        return <SiFirebase color="#ffccbe" size="min(5vmax, 2rem)" />;
-      case "jest":
-        return <SiJest color="#ffccbe" size="min(4.3vmax, 1.6rem)" />;
-      default:
-        return;
-    }
   };
 
   return (
@@ -135,25 +113,39 @@ const Projects = ({ view, toMain }) => {
                   href={projects[selected].demo}
                   rel="noreferrer"
                   target="_blank"
+                  tabIndex={getTabIndex()}
                 >
                   Demo
                 </a>
               </div>
               <span className="projects-tech-stack">
                 {projects[selected].tech.map((x) => (
-                  <div key={uniqid()}>{getTechIcons(x)}</div>
+                  <div
+                    key={uniqid()}
+                    data-name={x[0].toUpperCase() + x.slice(1)}
+                  >
+                    <TechIcon val={x} />
+                  </div>
                 ))}
+                <a
+                  className="projects-to-repo"
+                  href={projects[selected].repo}
+                  rel="noreferrer"
+                  target="_blank"
+                  tabIndex={getTabIndex()}
+                >
+                  Code
+                </a>
               </span>
               <p>{projects[selected].description}</p>
-              <a
-                className="projects-to-repo"
-                href={projects[selected].repo}
-                rel="noreferrer"
-                target="_blank"
-              >
-                Code
-              </a>
-              <aside id="showcase-images"></aside>
+
+              <aside id="showcase-images">
+                {projects[selected].pictures.map((x, i) => (
+                  <div key={uniqid()}>
+                    <img src={x} alt={x.title + " " + i} />
+                  </div>
+                ))}
+              </aside>
             </>
           )}
         </div>
