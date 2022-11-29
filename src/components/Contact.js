@@ -42,7 +42,7 @@ const Contact = ({ view, toMain }) => {
             className="vertical"
             tabIndex={getTabIndex()}
           >
-            <AiOutlineGithub color="#ffccbe" size="min(5vmax, 2rem)" />
+            <AiOutlineGithub color="#fffcb7" size="min(5vmax, 2rem)" />
           </a>
           <a
             href="https://www.linkedin.com/in/tom%C3%A1s-dessy-24a0a223a/"
@@ -51,7 +51,7 @@ const Contact = ({ view, toMain }) => {
             className="vertical"
             tabIndex={getTabIndex()}
           >
-            <AiFillLinkedin color="#ffccbe" size="min(5vmax, 2rem)" />
+            <AiFillLinkedin color="#fffcb7" size="min(5vmax, 2rem)" />
           </a>
           <button tabIndex={getTabIndex()}>
             <span>See Resume</span>
