@@ -1,5 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore, query } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  orderBy,
+  query,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyClOg-4G9jwXGty6WD3HMKva-bu4PcclEQ",
@@ -15,7 +21,7 @@ const db = getFirestore(app);
 
 const getProjects = async () => {
   const docRef = collection(db, "projects");
-  const q = query(docRef);
+  const q = query(docRef, orderBy("position", "desc"));
   const data = await getDocs(q);
   return data.docs.map((x) => x.data());
 };

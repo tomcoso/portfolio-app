@@ -150,6 +150,40 @@ const Projects = ({ view, toMain }) => {
           )}
         </div>
       </div>
+      <div className="projects-bg">
+        <svg width="100vw" height="100vh">
+          <defs>
+            <pattern
+              id="tenthGrid"
+              width="30"
+              height="30"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 30 0 L 0 0 0 30"
+                fill="none"
+                stroke="rgba(255,255,255,0.05)"
+                strokeWidth="0.5"
+              />
+            </pattern>
+            <pattern
+              id="grid"
+              width="90"
+              height="90"
+              patternUnits="userSpaceOnUse"
+            >
+              <rect width="100" height="100" fill="url(#tenthGrid)" />
+              <path
+                d="M 100 0 L 0 0 0 100"
+                fill="none"
+                stroke="rgba(255,255,255,0.05)"
+                strokeWidth="0.5"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
     </section>
   );
 };
