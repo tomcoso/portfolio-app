@@ -51,9 +51,9 @@ const Projects = ({ view, toMain }) => {
         <div id="projects-selector">
           <button tabIndex={getTabIndex()} onClick={moveUp}>
             {window.visualViewport.width < 800 ? (
-              <SlArrowLeft color="#ffccbe" size={"2rem"} />
+              <SlArrowLeft color="#fffcb7" size={"2rem"} />
             ) : (
-              <SlArrowUp color="#ffccbe" size={"2rem"} />
+              <SlArrowUp color="#fffcb7" size={"2rem"} />
             )}
           </button>
           <div id="selector-wrapper">
@@ -88,9 +88,9 @@ const Projects = ({ view, toMain }) => {
           </div>
           <button tabIndex={getTabIndex()} onClick={moveDown}>
             {window.visualViewport.width < 800 ? (
-              <SlArrowRight color="#ffccbe" size={"2rem"} />
+              <SlArrowRight color="#fffcb7" size={"2rem"} />
             ) : (
-              <SlArrowDown color="#ffccbe" size={"2rem"} />
+              <SlArrowDown color="#fffcb7" size={"2rem"} />
             )}
           </button>
           <div className="projects-current-wrap"></div>

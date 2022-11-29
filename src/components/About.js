@@ -1,6 +1,6 @@
 import "../style/about.scss";
 import { DiJavascript1, DiCss3, DiReact, DiHtml5, DiGit } from "react-icons/di";
-import { SiRedux } from "react-icons/si";
+import { SiRedux, SiJest } from "react-icons/si";
 
 const About = ({ view, toMain }) => {
   const getTabIndex = () => (view === "about" ? "0" : "-1");
@@ -45,6 +45,7 @@ const About = ({ view, toMain }) => {
           <DiCss3 color="#fffcb7" size="min(5vmax, 2rem)" />
           <DiReact color="#fffcb7" size="min(5vmax, 2rem)" />
           <SiRedux color="#fffcb7" size="min(4.5vmax, 1.8rem)" />
+          <SiJest color="#fffcb7" size="min(4.3vmax, 1.6rem)" />
         </div>
       </div>
       <div className="speckles">

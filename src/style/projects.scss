@@ -137,7 +137,7 @@
         height: var(--projects-selector-height);
         overflow: hidden;
 
-        outline: 1px solid #ffccbe;
+        outline: 1px solid #fffcb7;
 
         > div {
           display: grid;
@@ -198,11 +198,11 @@
         left: 50%;
         transform: translate(-50%, 50%);
 
-        border: 1px solid #ffccbe;
+        border: 1px solid #fffcb7;
         width: var(--current-project-width);
         height: var(--current-project-height);
 
-        box-shadow: inset 0px 0px 10px -5px #ffccbe;
+        box-shadow: inset 0px 0px 10px -5px #fffcb7;
       }
     }
 

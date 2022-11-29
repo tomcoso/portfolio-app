@@ -40,7 +40,7 @@
     --main-grid: repeat(3, min-content) / 1fr;
     --nav-row: 3/4;
     --nav-col: 1/2;
-    --nav-top: -15vh;
+    --nav-top: min(-12vh, -80px);
     --nav-grid: 1fr repeat(3, min-content) / repeat(2, min-content);
     --nav-line-row: 1/5;
     --nav-line-margin: 4vmax 4vmax 1vmax 1vmax;
@@ -123,7 +123,7 @@
     z-index: 1;
 
     .nav.style-line {
-      height: 30vh;
+      height: min(30vh, 200px);
       margin: var(--nav-line-margin);
       grid-row: var(--nav-line-row);
     }
