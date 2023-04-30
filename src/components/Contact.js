@@ -1,16 +1,19 @@
 import "../style/contact.scss";
 import ContactForm from "./ContactForm";
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
-// INSERT RESUME
-// import resume from "PATH TO RESUME";
+import resume from "../CV2023NZ01.pdf";
 
 const Contact = ({ view, toMain }) => {
   const getTabIndex = () => (view === "contact" ? "0" : "-1");
 
+  const handleResumeView = () => {
+    window.open(resume, "_blank");
+  };
+
   return (
     <section
       id="contact-section"
-      className={view === "contact" ? "current" : undefined}
+      className={view === "contact" ? "current" : ""}
     >
       <div id="contact-content-wrap">
         <ContactForm tabIndex={getTabIndex()} />
@@ -53,12 +56,9 @@ const Contact = ({ view, toMain }) => {
           >
             <AiFillLinkedin color="#fffcb7" size="min(5vmax, 2rem)" />
           </a>
-          <button tabIndex={getTabIndex()}>
+          <button tabIndex={getTabIndex()} onClick={handleResumeView}>
             <span>See Resume</span>
           </button>
-          {/* <a href={resume} without rel="noopener noreferrer" target={"_blank"} tabIndex={getTabIndex()}>
-            See Resume
-          </a> */}
         </div>
       </div>
       <div className="contact-bg"></div>

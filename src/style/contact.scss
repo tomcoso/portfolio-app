@@ -58,7 +58,7 @@
 
       display: flex;
       align-items: center;
-      justify-content: end;
+      justify-content: flex-end;
 
       .style-line {
         flex-grow: 1;
@@ -269,7 +269,7 @@
 #contact-section.current {
   .contact-bg {
     visibility: visible;
-    filter: opacity( 0.7);
+    filter: opacity(0.7);
     animation: noise 400ms infinite;
   }
 }

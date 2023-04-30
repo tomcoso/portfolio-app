@@ -1,0 +1,88 @@
+[
+  {
+    "tech": ["javascript", "react", "firebase"],
+    "position": 6,
+    "pictures": [
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/place-tag%2FScreenshot_2022-11-29_15-03-09.png?alt=media&token=47ef9c80-0df9-44ce-b2d3-e04663bd3a1e",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/place-tag%2FScreenshot_2022-11-28_21-44-15.png?alt=media&token=e7365954-9295-43fd-bd42-7bdf755edfa0",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/place-tag%2FScreenshot_2022-11-28_21-45-12.png?alt=media&token=f7a3b1d6-9d8a-4bb3-864b-625d97a7d73e",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/place-tag%2FScreenshot_2022-11-29_15-03-41.png?alt=media&token=ad8bf2ff-48aa-459d-9493-9c448d8ec56c"
+    ],
+    "repo": "https://github.com/tomcoso/photo-tagging-app",
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/place-tag%2Ffavicon.ico?alt=media&token=946676c5-a4ee-4e46-b45d-ffbccdebbe35",
+    "title": "r/Place Tag",
+    "description": "Photo tagging game (like Where's Waldo) using Reddit's r/Place 2022 final canvas, where you have to find the given objectives hidden in the image.  This project is a web SPA that uses react-router, React and Firebase.",
+    "demo": "https://rplace-tag.web.app/"
+  },
+  {
+    "pictures": [
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/battleship%2FScreenshot_2022-11-29_15-25-57.png?alt=media&token=b1b3f341-e7a2-4173-8c74-7ef79b90cedc",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/battleship%2FScreenshot_2022-11-28_21-49-16.png?alt=media&token=1af3ea0a-c78e-4374-81be-9339314afb72",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/battleship%2FScreenshot_2022-11-28_21-49-48.png?alt=media&token=27dac180-91c1-4ebe-b2e5-a26e70ad4bb6"
+    ],
+    "position": 5,
+    "repo": "https://github.com/tomcoso/battleship",
+    "demo": "https://tomcoso.github.io/battleship/",
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/battleship%2Ffavicon.png?alt=media&token=16a61237-51ba-4f81-80eb-830efc061076",
+    "tech": ["html", "css", "javascript", "jest"],
+    "title": "Battleship",
+    "description": "Battleship game where you try to sink all the AI's ships before it sinks yours! This project was built with vanilla Javascript and Test Driven Development - unit tests - with Jest."
+  },
+  {
+    "position": 4,
+    "pictures": [
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/shopping-cart%2FScreenshot_2022-11-29_15-11-57.png?alt=media&token=ad03202d-5bdd-4705-9f8a-b6b7e8259ae7",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/shopping-cart%2FScreenshot_2022-11-28_21-46-26.png?alt=media&token=f2765550-e17e-4760-909c-271263b3fe69",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/shopping-cart%2FScreenshot_2022-11-29_15-12-33.png?alt=media&token=b77803fe-306d-4f1a-a98f-8e37439d975d",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/shopping-cart%2FScreenshot_2022-11-29_15-12-58.png?alt=media&token=53a22f14-0476-441a-bef0-3ccce1e4eb93"
+    ],
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/shopping-cart%2Ffavicon.ico?alt=media&token=83992829-4724-482a-a149-bbf8f2dfa246",
+    "repo": "https://github.com/tomcoso/shopping-cart",
+    "demo": "https://tomcoso.github.io/shopping-cart/",
+    "tech": ["javascript", "react", "redux", "jest"],
+    "title": "Conditum",
+    "description": "Mock e-commerce website with shopping cart that uses the Fake Shop API to populate the app.  It is a Single Page Application built with react-router, React and Redux."
+  },
+  {
+    "description": "To-do-list style web app where you can group tasks into taskgroups / projects, and assign due dates, priorities, and a description to each task and taskgroup. It was built using vanilla Javascript with Webpack, HTML, CSS and Local Storage.",
+    "repo": "https://github.com/tomcoso/to-do-list",
+    "position": 3,
+    "pictures": [
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/task-manager%2FScreenshot_2022-11-29_15-10-49.png?alt=media&token=4dd8220b-4bf5-49f7-a88b-cc587ca8468a",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/task-manager%2FScreenshot_2022-11-29_15-10-03.png?alt=media&token=87220ffc-7b43-4e00-b196-2b1c07d3da3e",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/task-manager%2FScreenshot_2022-11-28_21-38-14.png?alt=media&token=8f44180d-1334-49c1-a859-03d270dcc386"
+    ],
+    "demo": "https://tomcoso.github.io/to-do-list/",
+    "title": "Task Manager",
+    "tech": ["html", "css", "javascript"],
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/task-manager%2Ffavicon-32x32.png?alt=media&token=a34afdc1-9626-44c9-88c9-2a189bfa1b51"
+  },
+  {
+    "pictures": [
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/memory-cards%2FScreenshot_2022-11-29_15-13-55.png?alt=media&token=5906d558-a157-4f0d-8336-c4dd711484f3",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/memory-cards%2FScreenshot_2022-11-28_21-42-36.png?alt=media&token=30a9800a-64d0-4624-8c36-19af16418c19",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/memory-cards%2FScreenshot_2022-11-28_21-42-53.png?alt=media&token=14504572-f447-414a-9aaf-9c404a3897e0"
+    ],
+    "position": 2,
+    "demo": "https://tomcoso.github.io/memory-card/",
+    "repo": "https://github.com/tomcoso/memory-card",
+    "tech": ["html", "css", "javascript", "react"],
+    "title": "Memory Cards",
+    "description": "Memory cards game with a Doctor Who theme, there are 5 levels with increasing difficulty and randomised cards, see if you are up for the challenge! This project was built with React and styled-components.",
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/memory-cards%2Ffavicon.ico?alt=media&token=986e8903-16ac-4ce1-b500-2a387b3abdf3"
+  },
+  {
+    "tech": ["html", "css", "javascript"],
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2Ffavicon.svg?alt=media&token=9c4b1141-7cb7-4f0c-ab22-81510c897e0d",
+    "demo": "https://tomcoso.github.io/weather-app/",
+    "description": "Weather forecast web app that implements Openweather and Geoapify APIs, you can search for cities and switch between Celcius and Fahrenheit. It is built with vanilla Javascript and Webpack.",
+    "pictures": [
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-29_15-15-24.png?alt=media&token=4515c4d9-0c53-46eb-b3c8-85718604cbbe",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-28_21-39-24.png?alt=media&token=7cebc0b3-c2e7-40b8-a88f-32a699159be7",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-28_21-40-32.png?alt=media&token=aafd5681-7403-4fb1-aaaf-f28d60a6b3c4"
+    ],
+    "title": "Weather App",
+    "position": 1,
+    "repo": "https://github.com/tomcoso/weather-app"
+  }
+]

@@ -6,10 +6,7 @@ const About = ({ view, toMain }) => {
   const getTabIndex = () => (view === "about" ? "0" : "-1");
 
   return (
-    <section
-      id="about-section"
-      className={view === "about" ? "current" : undefined}
-    >
+    <section id="about-section" className={view === "about" ? "current" : ""}>
       <div id="about-content-wrap">
         <nav>
           <div className="style-line"></div>

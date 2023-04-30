@@ -4,10 +4,7 @@ const Main = ({ view, toView }) => {
   const getTabIndex = () => (view === "main" ? "0" : "-1");
 
   return (
-    <section
-      id="main-section"
-      className={view === "main" ? "current" : undefined}
-    >
+    <section id="main-section" className={view === "main" ? "current" : ""}>
       <div id="main-content-wrap">
         <div className="main-title">
           <h1>Tomas Dessy</h1>

@@ -90,7 +90,7 @@
       grid-column: 1/2;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
       justify-content: center;
       place-self: start;
       gap: 1rem;
@@ -129,7 +129,7 @@
 
     > svg {
       margin: 0.5rem 0;
-      width: var(--about-icons-width);
+      max-width: var(--about-icons-width);
     }
 
     .style-line {

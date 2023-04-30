@@ -6,23 +6,14 @@ import {
   SlArrowRight,
 } from "react-icons/sl";
 import TechIcon from "./TechIcon";
-import { useEffect, useState } from "react";
-import { getProjects } from "../firebase-app";
+import { useState } from "react";
 import uniqid from "uniqid";
+import projects from "../projects.json";
 
 const Projects = ({ view, toMain }) => {
   const getTabIndex = () => (view === "projects" ? "0" : "-1");
 
-  const [projects, setProjects] = useState();
   const [selected, setSelected] = useState(0);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const data = await getProjects();
-      setProjects(data);
-    };
-    fetchProjects();
-  }, []);
 
   const moveUp = () => {
     if (selected === 0) return;
@@ -44,7 +35,7 @@ const Projects = ({ view, toMain }) => {
   return (
     <section
       id="projects-section"
-      className={view === "projects" ? "current" : undefined}
+      className={view === "projects" ? "current" : ""}
       tabIndex={getTabIndex()}
     >
       <div id="projects-content-wrap">
