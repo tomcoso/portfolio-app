@@ -1,5 +1,20 @@
 [
   {
+    "tech": ["javascript", "react", "firebase", "redux", "css", "html"],
+    "position": 7,
+    "pictures": [
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/coralit%2FScreenshot%20from%202023-05-08%2018-07-12.png?alt=media&token=99ee0571-c4bf-44a8-a7ad-ee876fa6b365",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/coralit%2FScreenshot%20from%202023-05-08%2018-07-42.png?alt=media&token=c61c1341-1cff-4975-bbda-33d0bb94186d",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/coralit%2FScreenshot%20from%202023-05-08%2018-09-20.png?alt=media&token=96b21b3a-b4fd-4b69-89d7-b56b444d69cf",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/coralit%2FScreenshot%20from%202023-05-08%2018-09-59.png?alt=media&token=efb8c08e-7265-4f2b-95ac-51510023b9c2"
+    ],
+    "repo": "https://github.com/tomcoso/website-clone",
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/coralit%2Ffavicon-32x32.png?alt=media&token=15e3e42b-75bf-4427-8d83-a69ffd83e494",
+    "title": "Coralit",
+    "description": "Coralit is a social media platform based on Reddit. It was developed as a personal project to learn and put together the skills of a front-end developer.",
+    "demo": "https://coralit-media.web.app/"
+  },
+  {
     "tech": ["javascript", "react", "firebase"],
     "position": 6,
     "pictures": [
