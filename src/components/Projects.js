@@ -58,7 +58,7 @@ const Projects = ({ view, toMain }) => {
                 <div className="style-line"></div>
               </div>
               {projects &&
-                projects.map((x, i) => (
+                projects.map((x) => (
                   <div
                     key={uniqid()}
                     className={

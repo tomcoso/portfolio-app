@@ -17,15 +17,15 @@ const About = ({ view, toMain }) => {
         <div id="about-info">
           <div>
             <p>
-              I am a self-taugth front-end developer, that enjoys building
+              I am a self-taught front-end developer, that enjoys building
               modern websites and apps that are scalable and tidy, where
               pragmatism and readability is a priority. My belief is that code
               can be an expression of both simplicity and complexity.
             </p>
             <p>
               Learning new concepts and technologies and exploring new ideas is
-              something I love. So I am always open to opportunities to continue
-              developing my skills and move forward in the industry.
+              something I love. So I am always looking for opportunities to
+              continue developing my skills and move forward in the industry.
             </p>
           </div>
           <p>

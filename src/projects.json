@@ -30,12 +30,26 @@
     "demo": "https://rplace-tag.web.app/"
   },
   {
+    "tech": ["html", "css", "javascript"],
+    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2Ffavicon.svg?alt=media&token=9c4b1141-7cb7-4f0c-ab22-81510c897e0d",
+    "demo": "https://tomcoso.github.io/weather-app/",
+    "description": "Weather forecast web app that implements Openweather and Geoapify APIs, you can search for cities and switch between Celcius and Fahrenheit. It is built with vanilla Javascript and Webpack.",
+    "pictures": [
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-29_15-15-24.png?alt=media&token=4515c4d9-0c53-46eb-b3c8-85718604cbbe",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-28_21-39-24.png?alt=media&token=7cebc0b3-c2e7-40b8-a88f-32a699159be7",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-28_21-40-32.png?alt=media&token=aafd5681-7403-4fb1-aaaf-f28d60a6b3c4"
+    ],
+    "title": "Weather App",
+    "position": 5,
+    "repo": "https://github.com/tomcoso/weather-app"
+  },
+  {
     "pictures": [
       "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/battleship%2FScreenshot_2022-11-29_15-25-57.png?alt=media&token=b1b3f341-e7a2-4173-8c74-7ef79b90cedc",
       "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/battleship%2FScreenshot_2022-11-28_21-49-16.png?alt=media&token=1af3ea0a-c78e-4374-81be-9339314afb72",
       "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/battleship%2FScreenshot_2022-11-28_21-49-48.png?alt=media&token=27dac180-91c1-4ebe-b2e5-a26e70ad4bb6"
     ],
-    "position": 5,
+    "position": 4,
     "repo": "https://github.com/tomcoso/battleship",
     "demo": "https://tomcoso.github.io/battleship/",
     "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/battleship%2Ffavicon.png?alt=media&token=16a61237-51ba-4f81-80eb-830efc061076",
@@ -44,7 +58,7 @@
     "description": "Battleship game where you try to sink all the AI's ships before it sinks yours! This project was built with vanilla Javascript and Test Driven Development - unit tests - with Jest."
   },
   {
-    "position": 4,
+    "position": 1,
     "pictures": [
       "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/shopping-cart%2FScreenshot_2022-11-29_15-11-57.png?alt=media&token=ad03202d-5bdd-4705-9f8a-b6b7e8259ae7",
       "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/shopping-cart%2FScreenshot_2022-11-28_21-46-26.png?alt=media&token=f2765550-e17e-4760-909c-271263b3fe69",
@@ -85,19 +99,5 @@
     "title": "Memory Cards",
     "description": "Memory cards game with a Doctor Who theme, there are 5 levels with increasing difficulty and randomised cards, see if you are up for the challenge! This project was built with React and styled-components.",
     "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/memory-cards%2Ffavicon.ico?alt=media&token=986e8903-16ac-4ce1-b500-2a387b3abdf3"
-  },
-  {
-    "tech": ["html", "css", "javascript"],
-    "favicon": "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2Ffavicon.svg?alt=media&token=9c4b1141-7cb7-4f0c-ab22-81510c897e0d",
-    "demo": "https://tomcoso.github.io/weather-app/",
-    "description": "Weather forecast web app that implements Openweather and Geoapify APIs, you can search for cities and switch between Celcius and Fahrenheit. It is built with vanilla Javascript and Webpack.",
-    "pictures": [
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-29_15-15-24.png?alt=media&token=4515c4d9-0c53-46eb-b3c8-85718604cbbe",
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-28_21-39-24.png?alt=media&token=7cebc0b3-c2e7-40b8-a88f-32a699159be7",
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-c817c.appspot.com/o/weather-app%2FScreenshot_2022-11-28_21-40-32.png?alt=media&token=aafd5681-7403-4fb1-aaaf-f28d60a6b3c4"
-    ],
-    "title": "Weather App",
-    "position": 1,
-    "repo": "https://github.com/tomcoso/weather-app"
   }
 ]
